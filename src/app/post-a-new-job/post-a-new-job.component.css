@@ -1,0 +1,109 @@
+/* Full page centering with animated background */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #dfe9f3, #f0f4f8, #dfe9f3);
+    background-size: 200% 200%;
+    animation: backgroundAnimation 10s ease infinite;
+    overflow: hidden;
+    position: relative;
+    z-index: 1050;
+}
+
+/* Keyframes for animated background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Enhanced rounded wave effect */
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 0, 47, 0.15), transparent 60%),
+        radial-gradient(circle at 75% 75%, rgba(209, 71, 255, 0.707), transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(0, 123, 255, 0.15), transparent 70%);
+    transform: rotate(45deg);
+    animation: waveAnimation 8s ease-in-out infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Animation for rounded wave effect */
+@keyframes waveAnimation {
+    0% { transform: translateX(-30%) translateY(-30%) rotate(45deg); }
+    50% { transform: translateX(30%) translateY(30%) rotate(45deg); }
+    100% { transform: translateX(-30%) translateY(-30%) rotate(45deg); }
+}
+
+/* Form container styling */
+.form-container {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+/* Form header styling */
+.form-container h6 {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Input styling */
+.input-group-text {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Button styling */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.form-container:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}

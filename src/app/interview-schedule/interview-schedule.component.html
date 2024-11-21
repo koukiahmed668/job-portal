@@ -1,0 +1,50 @@
+<div class="container-fluid p-4">
+    <h3 class="text-primary mb-4">Interview Schedule</h3>
+  
+    <!-- Calendar -->
+    <full-calendar
+      [options]="calendarOptions"
+      style="background-color: white; border-radius: 8px; padding: 20px;">
+    </full-calendar>
+  
+    <!-- Add Interview Modal -->
+    <div class="modal fade" id="addInterviewModal" tabindex="-1" aria-labelledby="addInterviewLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addInterviewLabel">Schedule a New Interview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="candidateName" class="form-label">Candidate Name</label>
+                <input type="text" class="form-control" id="candidateName" [(ngModel)]="newInterview.candidateName" name="candidateName">
+              </div>
+              <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <input type="text" class="form-control" id="position" [(ngModel)]="newInterview.position" name="position">
+              </div>
+              <div class="mb-3">
+                <label for="interviewDate" class="form-label">Interview Date</label>
+                <input type="datetime-local" class="form-control" id="interviewDate" [(ngModel)]="newInterview.date" name="date">
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" [(ngModel)]="newInterview.status" name="status">
+                  <option value="Scheduled">Scheduled</option>
+                  <option value="Completed">Completed</option>
+                  <option value="Cancelled">Cancelled</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="addInterview()">Save Interview</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

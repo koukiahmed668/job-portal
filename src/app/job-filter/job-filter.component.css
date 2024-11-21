@@ -1,0 +1,136 @@
+/* Container padding */
+.container-fluid {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+  }
+  
+  /* Sidebar Styling */
+  .filter-sidebar {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .filter-title {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-label {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .form-check-label {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  .filter-button {
+    background-color: #3498db;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .filter-button:hover {
+    background-color: #217dbb;
+  }
+  
+  /* Job Cards Styling */
+  .job-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-icon i {
+    color: #3498db;
+  }
+  
+  .job-details {
+    color: #2c3e50;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+  }
+  
+  .view-details-btn {
+    border-color: #3498db;
+    color: #3498db;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  /* Range Slider Styling */
+  .form-range {
+    accent-color: #3498db;
+    cursor: pointer;
+  }
+  
+  .text-muted strong {
+    color: #495057;
+  }
+  
+  /* Styling for Sidebar and Buttons */
+.filter-sidebar {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .job-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-button {
+    background-color: #3498db;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #217dbb;
+  }
+  
+  /* Add animation effects */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate__fadeInUp {
+    animation: fadeInUp 0.5s ease-in;
+  }
+  

@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="row gutters">
+        <!-- Left side: Profile picture and basic information -->
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="account-settings">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                            </div>
+                            <h5 class="user-name">{{company.name}}</h5>
+                            <h6 class="user-email">{{company.email}}</h6>
+                        </div>
+                        <div class="about">
+                            <h5>About</h5>
+                            <p>I'm Yuki. Full Stack Designer. I enjoy creating user-centric, delightful, and human experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Personal details form -->
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Company Details</h6>
+                        </div>
+                        
+                        <!-- Company Name -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" class="form-control" id="companyName" [(ngModel)]="company.Name" [placeholder]="company.name">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" [(ngModel)]="company.Email" [placeholder]="company.email">
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="passwordHash">Password</label>
+                                <input type="passwordHash" class="form-control" id="passwordHash" [(ngModel)]="company.PasswordHash" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" [(ngModel)]="company.Phone" [placeholder]="company.phone">
+                            </div>
+                        </div>
+
+                        <!-- Website URL -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="website">Website URL</label>
+                                <input type="url" class="form-control" id="website" [(ngModel)]="company.WebsiteURL" [placeholder]="company.websiteURL">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address Section -->
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mt-3 mb-2 text-primary">Location</h6>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" [(ngModel)]="company.Location" [placeholder]="company.location">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="text-right">
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                                <button type="button" class="btn btn-primary" (click)="onSubmit()">Update</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

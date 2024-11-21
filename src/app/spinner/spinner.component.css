@@ -1,0 +1,13 @@
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s; /* Transition for both opacity and visibility */
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s; /* Remove the delay for visibility when showing */
+    visibility: visible; /* Make visible immediately */
+    opacity: 1; /* Fully opaque */
+}

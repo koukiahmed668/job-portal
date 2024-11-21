@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="card shadow-lg">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4">Sign Up</h2>
+                    <form (ngSubmit)="signup()" #signupForm="ngForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="phone" class="form-control" id="phone" [(ngModel)]="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="websiteURL" class="form-label">Website URL</label>
+                            <input type="url" class="form-control" id="websiteURL" [(ngModel)]="websiteURL" name="websiteURL" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <select class="form-select" id="state" [(ngModel)]="state" name="state" required>
+                                <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2">Sign Up</button>
+                        <div class="mt-3 text-center">
+                            <small>Already have an account? <a routerLink="/login" class="text-primary">Log in here</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

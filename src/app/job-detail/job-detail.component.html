@@ -1,0 +1,29 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ job?.jobTitle }}</h5>
+          <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Company:</strong> {{ job?.company?.name }}</p>
+          <p><strong>Location:</strong> {{ job?.location }}</p>
+          <p><strong>Category:</strong> {{ job?.category }}</p>
+          <p><strong>Posted Date:</strong> {{ job?.postedDate | date }}</p>
+          <p><strong>Salary:</strong> ${{ job?.salary | number }}</p>
+          <p><strong>Description:</strong> {{ job?.jobDescription }}</p>
+          <p><strong>Requirements:</strong> {{ job?.requirements }}</p>
+  
+          <!-- File upload for resume -->
+          <div class="mb-3">
+            <label for="resumeUpload" class="form-label">Upload Resume:</label>
+            <input type="file" class="form-control" id="resumeUpload" (change)="onResumeUpload($event)">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="submitApplication()">Submit Application</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

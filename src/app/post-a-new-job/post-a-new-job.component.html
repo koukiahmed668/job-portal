@@ -1,0 +1,54 @@
+<div class="form-container">
+    <h6 class="mb-4">Post a New Job</h6>
+  
+    <form (ngSubmit)="onSubmit()">
+      <!-- Job Title -->
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Job Title" [(ngModel)]="job.jobTitle" name="jobTitle" required />
+      </div>
+  
+      <!-- Job Description -->
+      <div class="input-group mb-3">
+        <textarea class="form-control" placeholder="Job Description" rows="3" [(ngModel)]="job.jobDescription" name="jobDescription" required></textarea>
+      </div>
+  
+      <!-- Requirements -->
+      <div class="input-group mb-3">
+        <textarea class="form-control" placeholder="Requirements" rows="3" [(ngModel)]="job.requirements" name="requirements" required></textarea>
+      </div>
+  
+      <!-- Salary -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">DT</span>
+        <input type="number" class="form-control" placeholder="Salary (e.g., 2000)" [(ngModel)]="job.salary" name="salary" required />
+        <span class="input-group-text">per month</span>
+      </div>
+  
+      <!-- Location -->
+      <div class="input-group mb-3">
+        <select class="form-select" [(ngModel)]="job.location" name="location" required>
+          <option [value]="null" disabled selected>Select Location</option>
+          <option *ngFor="let location of locations" [value]="location.value">
+            {{ location.name }}
+          </option>
+        </select>
+      </div>
+  
+      <!-- Category -->
+      <div class="input-group mb-3">
+        <select class="form-select" [(ngModel)]="job.category" name="category" required>
+          <option [value]="null" disabled selected>Select Category</option>
+          <option *ngFor="let category of categories" [value]="category.value">
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary btn-submit" [disabled]="!job.jobTitle || !job.jobDescription || !job.requirements || !job.salary || !job.location || !job.category">
+          Post Job
+        </button>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+.modal-dialog {
+    max-width: 600px;
+  }
+  .modal-content {
+    border-radius: 8px;
+  }
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+  }
+  .modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .btn-close {
+    background-color: transparent;
+    border: none;
+  }
+  
